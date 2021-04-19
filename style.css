@@ -185,3 +185,25 @@ input:checked + .slider::before {
     font-size: 30px;
     margin-right: 5px;
 }
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .image-container {
+        margin: 10px;
+    }
+
+    section {
+        margin: 0 10px;
+    }
+
+    .toggle-text {
+        display: none; 
+    }
+}
