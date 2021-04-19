@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Oswald&display=swap');
+
+:root {
+    --header-background: #fccde2;
+    --header-link: #8A0000;
+    --background: #fcefee;
+    --on-background: #870338;
+    --on-background-alt: rgb(135, 3, 56, 0.8);
+    --primary-button: #1A537F;
+    --primary-button-text: #fff;
+    --secondary-button: #0B5B4A;
+    --secondary-button-text: #fff;
+}
+[data-theme="dark"] {
+    --header-background: #242526;
+    --header-link: #75B3FF;
+    --background: #3a3b3c;
+    --on-background: #FFFFFF;
+    --on-background-alt: #C4CFD4;
+    --primary-button: #A7D4EC;
+    --primary-button-text: #000;
+    --secondary-button: #33E6BF;
+    --secondary-button-text: #000;
+}
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--on-background);
+    font-family: 'Comfortaa', sans-serif;
+    background-color: var(--background);
+}
+
+header {
+    z-index: 10;
+    position: fixed;
+    font-family: Oswald, sans-serif;
+    font-size: 24px;
+    letter-spacing: 3px;
+    padding: 25px;
+    width: 100vw;
+    background: var(--header-background);
+}
+
+a {
+    margin-right: 25px;
+    color: var(--header-link);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+}
+
+a:hover,
+a:focus {
+    border-bottom: 3px solid;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Kaushan Script', sans-serif;
+    font-size: 100px;
+    margin-bottom: 0;
+}
+  
+h2 {
+    color: var(--on-background-alt);
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.buttons {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+button {
+    min-width: 100px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-right: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.primary {
+    color: var(--primary-button-text);
+    border: 2px solid var(--primary-button);
+    background: var(--primary-button);
+}
+
+.secondary {
+    color: var(--secondary-button-text);
+    border: 2px solid var(--secondary-button);
+    background: var(--secondary-button);
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+/* Dark Mode Toggle */
+.theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    right: 25px;
+    top: 30px;
+}
+  
+.theme-switch-wrapper span {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+  
+.toggle-text {
+    position: relative;
+    top: -4px;
+    right: 5px;
+    color: var(--on-background);
+}
+  
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+  
+.theme-switch input {
+    display: none;
+}
+  
+.slider {
+    background: var(--background);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+}
+  
+.slider::before {
+    background: var(--on-background);
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+}
+  
+input:checked + .slider {
+    background: var(--background);
+}
+  
+input:checked + .slider::before {
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round::before {
+    border-radius: 50%;
+}
+  
+.fas {
+    font-size: 30px;
+    margin-right: 5px;
+}
